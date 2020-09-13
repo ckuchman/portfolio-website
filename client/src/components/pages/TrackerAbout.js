@@ -3,20 +3,21 @@ import React from 'react'
 export default function TrackerAbout() {
     return (
         <React.Fragment>
+            <div className="partial-width-container">
             <h1 id="about-title">Why Track Yourself?</h1>
 
-            <h2 class="about-header">Stuck in the Apartment</h2>
+            <h2 className="about-header">Stuck in the Apartment</h2>
 
             <p>Everyone went through it, COVID hit and suddenly everyone was stuck in their house for months. As the weeks passed I filled my time with MOOCs that interested me, notably the wonderful <a href="https://www.edx.org/course/embedded-systems-shape-the-world-microcontroller-i">embedded course</a> by Jonathan Valvano and Ramesh Yerraballi. After some time making some lights blink I was curious what else I could do with these new sensor powers.
             </p>
 
             <p>After walking to the kitchen for the third snack of the morning, I wondered how did I normally move around my place when not trapped in here? How should I collect the data, and what do I do with it once I have it? That is when I started down this deep rabbit hole</p>
 
-            <h2 class="about-header">The Process</h2>
+            <h2 className="about-header">The Process</h2>
 
             <p>This functions as a semi-active log of the decisions made during this project and how it evolved over time.</p>
 
-            <h3 class="process-header">What Sensor?</h3>
+            <h3 className="process-header">What Sensor?</h3>
 
             <p>The first question for this project was how should I do the active tracking? I obviously needed some kind of sensor for motion but what would work best?</p>
 
@@ -35,7 +36,7 @@ export default function TrackerAbout() {
                 <img class="img-2" src=""></img>
             </div> */}
 
-            <h3 class="process-header">What Microcontroller?</h3>
+            <h3 className="process-header">What Microcontroller?</h3>
 
             <p>I will admit, Arduinos can be used for a large number of projects and work great. The thing is that all that capability is not something that I really need, I only have a handful of asks:</p>
 
@@ -53,7 +54,7 @@ export default function TrackerAbout() {
                 <img class="img-2" src=""></img>
             </div> */}
 
-            <h3 class="process-header">The First Working Circuit!</h3>
+            <h3 className="process-header">The First Working Circuit!</h3>
 
             <p>While I ultimately want the device to be battery powered, for early testing purposes I ran off a direct connection to my computer. This also made it much easier to load new software as I iterated. Using online reference I was quickly able to find a good fuctional circuit to connect the PIR and indicator LED.</p>
 
@@ -75,7 +76,7 @@ export default function TrackerAbout() {
             <h3 class="process-headers">More Sensors, More Data</h3>
 
             <h3 class="process-headers">Building in Machine Learning</h3> */}
-
+            </div>
         </React.Fragment>
     )
 }

@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route} from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import Header from './components/layout/Header.js';
-import TrackerAbout from './components/pages/TrackerAbout.js';
+import Home from './components/pages/Home.js';
+import About from './components/pages/About.js';
 
 import './App.css';
 
@@ -35,14 +36,9 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <div className="container">
             <Header />
-            <Route exact path="/" render={props => (
-              <React.Fragment>
-              </React.Fragment>
-            )} />
-            <Route path="/trackerabout" component={TrackerAbout} />
-          </div>
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
         </div>
       </Router>
     );
