@@ -18,12 +18,17 @@ a {
   padding: 0 1rem;
 }
 
+.full-width-container {
+  width:100%;
+  max-width: none;
+}
+
 .code-background {
-  background-color: #DCDCDC;
+  background-color:#d8ede2;
 }
 
 .physical-background {
-  background-color: #C0C0C0;
+  background-color: #d8e7ed;
 }
 
 .general-nav-bar {
@@ -45,6 +50,13 @@ a {
 }
 
 .background-section {
+  text-align: center;
+  margin-bottom: 2rem;
+  width:100%;
+  max-width: none;
+}
+
+.project-container {
   text-align: center;
   margin-bottom: 2rem;
   width:100%;
