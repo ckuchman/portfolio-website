@@ -1,19 +1,45 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 
-export default class ProjectCard extends React.Component {    
+export default function ProjectCard(props) {   
+    const [textVisibility, setTextVisiblity] = React.useState(0);
+    const [imgVisibility, setImgVisiblity] = React.useState(1);
 
-    render() {
-        return (
-            <React.Fragment>
-                <Card style={{margin: '1rem'}}>
-                <Card.Img src={this.props.img} />
-                <Card.ImgOverlay>
-                    <Card.Title>{this.props.title}</Card.Title>
-                    <Card.Text>{this.props.text}</Card.Text>
-                </Card.ImgOverlay>
-                </Card>
-            </React.Fragment>
-        )
-    }
+    const textStyles = {
+        color: 'white',
+        opacity: textVisibility
+    };
+
+    const imgStyles = {
+        opacity: imgVisibility
+    };
+
+    const turnOnVisibility = () => {
+        setTextVisiblity(1);
+        setImgVisiblity(.375);
+    };
+
+    const turnOffVisibility = () => {
+        setTextVisiblity(0);
+        setImgVisiblity(1);
+    };
+
+    return (
+        <React.Fragment>
+            <Card style={{margin: '1rem', 'background-color': 'black'}}>
+            <Card.Img 
+                src={props.img}
+                style={imgStyles}
+            />
+            <Card.ImgOverlay
+                style={textStyles}
+                onMouseEnter={turnOnVisibility}
+                onMouseLeave={turnOffVisibility}
+            >
+                <Card.Title>{props.title}</Card.Title>
+                <Card.Text>{props.text}</Card.Text>
+            </Card.ImgOverlay>
+            </Card>
+        </React.Fragment>
+    );
 }

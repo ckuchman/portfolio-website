@@ -11,9 +11,15 @@ import c9Thumb from '../../image/C9-Thumb.jpg';
 import flipThumb from '../../image/Flip-Thumb.jpg';
 import railThumb from '../../image/Rail-Thumb.jpg';
 import tiaThumb from '../../image/Tia-Thumb.jpg';
+import pomodoroThumb from '../../image/Pomodoro-Thumb.jpg';
+import detectorThumb from '../../image/Detector-Thumb.jpg';
+import reviewThumb from '../../image/Review-Thumb.jpg';
+import ecThumb from '../../image/EC-Thumb.jpg';
+import shellThumb from '../../image/Shell-Thumb.jpg';
 
 
 export default function Home() {
+
     return (
         <React.Fragment>
             <Container className="home-title">
@@ -54,35 +60,41 @@ export default function Home() {
                 <Container>
                 <Row>
                     <Col><ProjectCard
+                        img={detectorThumb}
                         title="Apartment Motion Detection and Prediction"
                         text="Battery powered motion detector for apartment that detects motion between rooms. The data is
                         then sent over wifi to a Postgres database for analysis and graphical display and for future ML processing."
                     /></Col>
 
                     <Col><ProjectCard 
+                        img={pomodoroThumb}
                         title="Pomodoro Time Tracker"
                         text="Pomodoro website built with Django including account management and task tracking. Designed to function well for people that
                         record billable hours and gamifies the process for increased productivity."
                     /></Col>
 
                     <Col><ProjectCard 
-                        title="Boardgame Database"
-                        text="Boardgame play and onwership tracker built in Node.js with a backend database."
+                        img={shellThumb}
+                        title="MiniShell"
+                        text="Shell created in C that managed forked processes, wait PID and singal control."
                     /></Col>
                 </Row>
                 <Row>
                     <Col><ProjectCard
+                        img={reviewThumb}
                         title="CAD Model Review Automation"
                         text="Testing software built with Autodesk API to check CAD models for company data accuracy, massively reduced errors and
                         eliminated repetitive tasks for engineers."
                     /></Col>
 
                     <Col><ProjectCard 
+                        img={ecThumb}
                         title="EC Database"
                         text="Access database with backend .NET form resizing and processing for Engineering Change process I developed/implemented"
                     /></Col>
 
                     <Col><ProjectCard 
+                        img={shellThumb}
                         title="MiniShell"
                         text="Shell created in C that managed forked processes, wait PID and singal control."
                     /></Col>
