@@ -24,11 +24,13 @@ a {
 }
 
 .code-background {
-  background-color:#d8ede2;
+  background-color:#9ed9bb;
+  border-color:#9ed9bb ;
 }
 
 .physical-background {
   background-color: #d8e7ed;
+  border-color:#d8e7ed;
 }
 
 .general-nav-bar {
@@ -37,7 +39,8 @@ a {
 
 .home-title {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 10rem;
   width:100%;
   max-width: none;
 }
@@ -51,7 +54,8 @@ a {
 
 .background-section {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 10rem;
   width:100%;
   max-width: none;
 }
@@ -61,4 +65,13 @@ a {
   margin-bottom: 2rem;
   width:100%;
   max-width: none;
+}
+
+.project-spacer {
+  height: 5rem;
+}
+
+.title-split {
+  padding-top: 1rem;
+  height: 10rem;
 }

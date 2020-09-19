@@ -1,5 +1,7 @@
 import React from 'react';
+
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
 export default function ProjectCard(props) {   
     const [textVisibility, setTextVisiblity] = React.useState(0);
@@ -38,6 +40,9 @@ export default function ProjectCard(props) {
             >
                 <Card.Title>{props.title}</Card.Title>
                 <Card.Text>{props.text}</Card.Text>
+                {props.link &&
+                    <Button variant="outline-light" href={props.link} target="_blank">See More</Button>
+                }
             </Card.ImgOverlay>
             </Card>
         </React.Fragment>
