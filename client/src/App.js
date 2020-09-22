@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import Header from './components/layout/Header.js';
 import Home from './components/pages/Home.js';
 import About from './components/pages/About.js';
+import BoardgameSearch from './components/pages/BoardgameSearch.js';
 
 import './App.css';
 
@@ -39,6 +40,7 @@ class App extends Component {
             <Header />
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
+            <Route path="/boardgames" component={BoardgameSearch} />
         </div>
       </Router>
     );
