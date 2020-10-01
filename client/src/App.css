@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
 * {
+  font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -28,16 +31,26 @@ a {
   border-color:#9ed9bb ;
 }
 
+.code-word {
+  color:#9ed9bb;
+}
+
 .physical-background {
-  background-color: #d8e7ed;
-  border-color:#d8e7ed;
+  background-color: #b8d3de;
+  border-color:#b8d3de;
+}
+
+.physical-word {
+  color: #b8d3de;
 }
 
 .general-nav-bar {
   margin-bottom: 2rem;
 }
 
-.home-title {
+/*Title Section*/
+
+.title {
   text-align: center;
   margin-top: 5rem;
   margin-bottom: 10rem;
@@ -45,12 +58,54 @@ a {
   max-width: none;
 }
 
-.home-section {
-  text-align: center;
-  margin-bottom: 2rem;
-  width:100%;
-  max-width: none;
+.title-split {
+  padding-top: 1rem;
+  height: 16rem;
 }
+
+.title-outside-text {
+  font-weight: 300;
+  margin: 3rem;
+}
+
+.title-inside-text {
+  font-weight: 300;
+  font-size: 5rem;
+  color: white;
+  margin-top: 4rem;
+}
+
+/*Personal Section*/
+
+.personal {
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+  width:100%;
+  max-width: 1500px;
+}
+
+.personal-content {
+  position: absolute;
+  top: 85%;
+  max-width: 1500px;
+}
+
+.personal-header {
+  font-weight: 400;
+  font-size: 4rem;
+  margin-left: 3.5rem;
+  margin-bottom: 3rem;
+  color:white;
+}
+
+.personal-body {
+  font-weight: 300;
+  font-size: 1.75rem;
+  margin-left: 3rem;
+  margin-right: 7rem; 
+  color:white;
+}
+/*Background Section*/
 
 .background-section {
   text-align: center;
@@ -59,6 +114,30 @@ a {
   width:100%;
   max-width: none;
 }
+
+.background-title {
+  font-weight: 300;
+  margin: 3rem;
+}
+
+.background-header {
+  font-weight: 300;
+  font-size: 3rem;
+  color: white;
+  margin-top: 4rem;
+}
+
+.background-body {
+  font-weight: 400;
+  font-size: 1.25rem;
+  color:white;
+}
+
+#resume-button {
+  margin-left: 1rem;
+}
+
+/*Project Section*/
 
 .project-container {
   text-align: center;
@@ -69,9 +148,4 @@ a {
 
 .project-spacer {
   height: 5rem;
-}
-
-.title-split {
-  padding-top: 1rem;
-  height: 10rem;
 }

@@ -1,7 +1,5 @@
 import React from 'react'
 
-import Jumbotron from 'react-bootstrap/Jumbotron';
-import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
 
 import aboutJumbo from '../../image/About-Jumbo.jpg';
@@ -9,7 +7,7 @@ import aboutJumbo from '../../image/About-Jumbo.jpg';
 export default function About() {
     return (
         <React.Fragment>
-
+            <Image src={aboutJumbo} fluid />
             <div className="partial-width-container">
                 <p>
                     I'm Chris Kuchman and I am obsessed with helping creative people achieve their dreams with high quality. 

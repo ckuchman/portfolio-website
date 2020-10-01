@@ -8,6 +8,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 import ProjectCard from '../ProjectCard'
+import TitleImage from '../TitleImage'
 
 import bahnThumb from '../../image/Bahn-Thumb.jpg';
 import benchThumb from '../../image/Bench-Thumb.jpg';
@@ -20,33 +21,43 @@ import detectorThumb from '../../image/Detector-Thumb.jpg';
 import reviewThumb from '../../image/Review-Thumb.jpg';
 import ecThumb from '../../image/EC-Thumb.jpg';
 import shellThumb from '../../image/Shell-Thumb.jpg';
+import aboutJumbo from '../../image/About-Jumbo.jpg';
+
 
 
 export default function Home() {
 
     return (
         <React.Fragment>
-            <Container className="home-title">
-                <h1>I find joy in the creation of</h1>
+            <Container className="title">
+                <h1 className="title-outside-text">I find joy in the creation of</h1>
                 <Row id="title-split">
                     <Col className="code-background"/>
-                    <Col className="title-split code-background"><h1>Code</h1></Col>
-                    <Col className="title-split physical-background"><h1>Objects</h1></Col>
+                    <Col className="title-split code-background"><h1 className="title-inside-text">Code</h1></Col>
+                    <Col className="title-split physical-background"><h1 className="title-inside-text">Objects</h1></Col>
                     <Col className="physical-background"/>
                 </Row>
-                <h1>and the union of the two</h1>
+                <h1 className="title-outside-text">and the union of the two</h1>
             </Container>
 
+            <TitleImage 
+                img={aboutJumbo}
+             />
+
             <Container className="background-section">
-                <h1>What I Know</h1>
+                <h1 className="background-title">What I Know
+                    <Button variant="outline-dark" id="resume-button">
+                    Resume
+                    </Button>
+                </h1>
                 <Row>
                     <Col className="code-background"/>
                     <Col className="code-background">
-                        <h2>Computer Science</h2>
+                        <h2 className="background-header">Computer Science</h2>
                         <Accordion>
                         <Card className="code-background">
                             <Card.Header className="code-background">
-                            <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                            <Accordion.Toggle as={Button} variant="link" eventKey="0" style={{color: "white"}}>
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
                                 <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
@@ -54,30 +65,58 @@ export default function Home() {
                             </Accordion.Toggle>
                             </Card.Header>
                             <Accordion.Collapse eventKey="0">
-                            <Card.Body>                        
+                            <Card.Body className="background-body">                        
                                 <div>Completing a Bachelor's in Computer Science on March 2021</div>
+                                <div>
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dot" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                                    </svg>
+                                </div>
                                 <div>Use code in a non-code world to eliminate redundant work, so people can focus on being creative.</div>
-                                <div>Approached non-code problems with a software mindset, <b>break the problem to its fundimental elements and solve those</b></div>   
+                                <div>
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dot" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                                    </svg>
+                                </div>
+                                <div>Approached non-code problems with a software mindset. <b>Break the problem to its fundimental elements and solve those</b></div>   
                             </Card.Body>
                             </Accordion.Collapse>
                         </Card>
                         </Accordion>
                     </Col>
                     <Col className="physical-background">
-                        <h2>Mechanical Engineering</h2>
+                        <h2 className="background-header">Mechanical Engineering</h2>
                         <Accordion>
                         <Card className="physical-background">
                             <Card.Header className="physical-background">
-                            <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                                +
+                            <Accordion.Toggle as={Button} variant="link" eventKey="0" style={{color: "white"}}>
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                            </svg>
                             </Accordion.Toggle>
                             </Card.Header>
                             <Accordion.Collapse eventKey="0">
-                            <Card.Body>                        
+                            <Card.Body className="background-body">                        
                                 <div>Bachelor's in Mechanical Engineering</div>
+                                <div>
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dot" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                                    </svg>
+                                </div>
                                 <div>Worked with international and inhouse designers on over 7 different products</div>
+                                <div>
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dot" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                                    </svg>
+                                </div>
                                 <div>Designed countless plastic and steel parts that would do the most benefit with the least cost</div>
-                                <div>All designs done with customer and factory worker at the front of my mind, <b>simple and what is most needed</b></div>
+                                <div>
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dot" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                                    </svg>
+                                </div>
+                                <div>All designs done with customer and factory worker at the front of my mind. <b>Simple and what is most needed</b></div>
                             </Card.Body>
                             </Accordion.Collapse>
                         </Card>
@@ -104,7 +143,7 @@ export default function Home() {
                         title="Pomodoro Time Tracker"
                         text="Pomodoro website built with Django including account management and task tracking. Designed to function well for people that
                         record billable hours and gamifies the process for increased productivity."
-                        link="https://www.watsonfurniture.com/products/c9-rail"
+                        link="http://pomodoro-posse.herokuapp.com/"
                     /></Col>
 
                     <Col><ProjectCard 
