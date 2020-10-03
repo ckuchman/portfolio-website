@@ -37,7 +37,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-            <Header />
+            {/* <Header /> */}
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/boardgames" component={BoardgameSearch} />

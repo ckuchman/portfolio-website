@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Link from 'react-router-dom'
+
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -23,6 +25,7 @@ import ecThumb from '../../image/EC-Thumb.jpg';
 import shellThumb from '../../image/Shell-Thumb.jpg';
 import aboutJumbo from '../../image/About-Jumbo.jpg';
 
+import resume from '../../assets/ChristopherKuchmanResume.pdf';
 
 
 export default function Home() {
@@ -44,16 +47,17 @@ export default function Home() {
                 img={aboutJumbo}
              />
 
+
             <Container className="background-section">
                 <h1 className="background-title">What I Know
-                    <Button variant="outline-dark" id="resume-button">
+                    {/* <Button variant="outline-dark" id="resume-button" href={resume} download>
                     Resume
-                    </Button>
+                    </Button> */}
                 </h1>
                 <Row>
                     <Col className="code-background"/>
                     <Col className="code-background">
-                        <h2 className="background-header">Computer Science</h2>
+                        <h2 className="background-header">Computer<br/>Science</h2>
                         <Accordion>
                         <Card className="code-background">
                             <Card.Header className="code-background">
@@ -85,7 +89,7 @@ export default function Home() {
                         </Accordion>
                     </Col>
                     <Col className="physical-background">
-                        <h2 className="background-header">Mechanical Engineering</h2>
+                        <h2 className="background-header">Mechanical<br/>Engineering</h2>
                         <Accordion>
                         <Card className="physical-background">
                             <Card.Header className="physical-background">
@@ -126,11 +130,12 @@ export default function Home() {
                 </Row>
             </Container>
 
-            <h1 style={{textAlign: 'center'}}>What I Have Made</h1>
+
+            <h1 className="project-title">What I Have Made</h1>
             <Container className="full-width-container code-background">
                 <Container>
                 <div className="project-spacer"/>    
-                <Row>
+                <Row sm={1} md={2} lg={2} xl={2}>
                     <Col><ProjectCard
                         img={detectorThumb}
                         title="Apartment Motion Detection and Prediction"
@@ -152,8 +157,7 @@ export default function Home() {
                         text="Shell created in C that managed forked processes, wait PID and singal control."
                         link="https://github.com/ckuchman/mini-shell/blob/master/miniShell.c"
                     /></Col>
-                </Row>
-                <Row>
+
                     <Col><ProjectCard
                         img={reviewThumb}
                         title="CAD Model Review Automation"
@@ -177,7 +181,7 @@ export default function Home() {
             <Container className="full-width-container physical-background">
                 <Container>
                 <div className="project-spacer"/>  
-                <Row>
+                <Row sm={1} md={2} lg={2} xl={2}>
                     <Col><ProjectCard 
                         img={c9Thumb}
                         title="C9"
@@ -202,9 +206,7 @@ export default function Home() {
                         cost and taking up less space."
                         link="https://www.watsonfurniture.com/products/bahn-rail"
                     /></Col>
-                </Row>
 
-                <Row>
                     <Col><ProjectCard 
                         img={flipThumb}
                         title="Flip"
@@ -231,8 +233,8 @@ export default function Home() {
                 </Row>    
                 <div className="project-spacer"/>  
                 </Container> 
-            </Container>      
-            
+            </Container>    
+        
         </React.Fragment>
     )
 }
