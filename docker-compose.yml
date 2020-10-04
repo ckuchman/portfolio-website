@@ -1,0 +1,31 @@
+version: "3.8"
+services:
+#########################
+#   Setup node container
+#########################
+  server:
+    build: ./server
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./server/src:/srv/app/admin-server/src
+      - /srv/app/admin-server/node_modules
+    command: npm start
+    
+#########################
+#   Setup client container
+#########################
+  client:
+    build:
+      context: ./client
+    ports:
+      - "3000:3000"
+    container_name: portfolio-client
+    stdin_open: true
+    volumes:
+      - ./client/src:/srv/app/admin-client/src
+      - ./client/public:/srv/app/admin-client/public
+        - /srv/app/admin-client/node_modules
+    links:
+      - server
+    command: npm start
